@@ -1,0 +1,95 @@
+.myHomePageCarousel{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.carousel-indicators li {
+  width: 50px;
+  height: 10px;
+}
+.carousel-item img{
+    width: 100%;
+    height: 90vh;
+}
+.aboutImg{
+    min-width: 90%;
+    height: 300px;
+    
+}
+.homePageOtherHeadings{
+    color:gray;
+    font-weight: 500;
+    padding-top: 30px;
+}
+.homePageAbout{
+    background-color: #ecebff;
+    height: fit-content;
+}
+.homePageAboutSection{
+    background-color: #feffeb;
+    padding: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.homePageAboutBodyHeading{
+    color:  gray;
+}
+.homePageAboutBody{
+    background-color: #ffebd2;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-bottom: 20px;
+}
+.homePageAboutBtn{
+    background-color: white;
+    color: #ff9000;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #ff9000;
+}
+.homePageAboutBtn:hover{
+    background-color: #ff9000;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.homePageServices{
+    background-color: #ecebff;
+    height: fit-content;
+}
+.homePageServiceCards{
+    padding: 3rem;
+}
+.homePageServiceCardsIndividual{
+    background-color: white;
+}
+.homePageServiceCardsIndividual:hover{
+    background-color: white;
+    
+}
+.myCard{
+    background-color: #fcffeb;
+    cursor: pointer;
+    box-shadow: 10px 20px 20px rgba(8, 8, 8, 0.12), 10px 20px 20px rgba(0,0,0,.06);
+
+}
+.myCard:hover{
+    background-color: #fcffeb;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+@media only screen and (max-width:420px){
+    .myHomePageCarousel{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: 50vh;
+    }
+    
+}
+/*  */

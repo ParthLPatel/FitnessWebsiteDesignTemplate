@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap t1</title>
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/7d58ac0198.js" crossorigin="anonymous"></script>
+    
+    <!-- navbar css -->
+    <link rel="stylesheet" href="navbar.css"/>
+
+    <!-- corousel css-->
+    <link rel="stylesheet" href="corousel.css">
+
+    
+    
+    
+</head>
+<body>
+
+    <!-- NavBar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid"> <!-- or container-md-->
+
+            <a class="navbar-brand" href="#">
+            <!-- <img src="company_logo_60.png"/> -->
+            Company Name
+            </a>
+
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> <!-- hamburger icon on smaller size-->
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    
+                </ul>
+
+
+                <!-- SearchBar -->
+                    <div id='searchDiv' style="display: none;">
+                        <div class="flex-container searchBarSubDiv d-flex">
+                            <input class="form-control me-2"  id="searchBar" type="search" placeholder="Search" aria-label="Search" style="height: 35px;">
+                            <!-- <button class="searchBarSubBtn border-left-0 border">
+                                <i class="fas fa-search fa-1x"></i>
+                            </button>  -->
+                            <!-- &nbsp;&nbsp; -->
+                        </div>
+
+                       
+                    </div>
+                    <button class="btn search_icon" type="submit" onclick="myfxn();">
+                        <!-- search icon as btn -->
+                        <i class="fas fa-search" id="searchIcon"></i>
+                    </button>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        function myfxn(){
+            const x = document.getElementById('searchDiv')
+            const y = document.getElementById('searchIcon')
+            if (x.style.display === 'none'){
+                x.style.display = 'block';
+                y.className = "fas fa-times";
+            }
+            else{
+                x.style.display = 'none';
+                y.className = "fas fa-search";
+            }
+        };
+        
+    </script>
+    <!-- /NavBar -->
+
+
+
+    <!-- Image Corousel -->
+    <div id="carouselExampleIndicators" class="carousel slide myHomePageCarousel" data-bs-ride="carousel">
+
+        <!-- bars on images for selecting specific img -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            <!-- <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li> -->
+        </ol>
+
+        <div class="carousel-inner">
+            <!-- data-bs-interval="10000" used for setting time interval -->
+            <!-- carousel-item active; here used for setting active(first showing) -->
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="https://images.unsplash.com/photo-1571731956672-f2b94d7dd0cb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80" class="d-block w-100" alt="c1.jpg" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="https://images.unsplash.com/photo-1494597564530-871f2b93ac55?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80" class="d-block w-100" alt="c3.jpg" />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+            </div>
+            <!-- 
+            <div class="carousel-item">
+                <video class="video-fluid" autoplay loop muted>
+                    <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+                </video>
+            </div> -->
+
+            <div class="carousel-item" data-bs-interval="10000">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80" class="d-block w-100" alt="c4.jpg" />
+            </div>
+        </div>
+
+        <!-- left/right indicators -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+    <!-- /Image Corousel -->
+
+
+
+    <!-- About Page -->
+    <section class="homePageAbout">
+        <div class="text-center">
+            <!-- <hr class="w-25 mx-auto" /> -->
+            <h1 class="display-3 mt-2 homePageOtherHeadings">About Us</h1>
+            <hr class="w-25 mx-auto mb-5"/>
+        </div>
+        <div class="container">
+            <div class="row homePageAboutSection">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="aboutLogo.png" alt="about Us.." class="img-fluid aboutImg">
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 homePageAboutBody">
+                    <h1 class="display-5 homePageAboutBodyHeading">Our Journey</h1>
+                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor animi nam ex recusandae? Animi voluptatibus qui ab vel illum deserunt ipsam voluptatem error sit accusantium consequuntur earum, odit labore sequi, tenetur iusto dicta tempora esse. Rem animi aliquid nesciunt ex dolores debitis ipsum impedit necessitatibus, quasi asperiores, blanditiis qui iure ratione minima porro? Blanditiis alias a enim numquam rerum debitis.</p>
+                    <button class="btn homePageAboutBtn">About Us</button>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+
+    </section>
+    <br />
+    <!-- /About Page -->
+
+
+
+    <!-- Services Page -->
+    <section class="homePageServices">
+        <div class="text-center">
+            <!-- <hr class="w-25 mx-auto" /> -->
+            <h1 class="display-3 homePageOtherHeadings">Our Services</h1>
+            <hr class="w-25 mx-auto" />
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-5 homePageServiceCards">
+            <div class="homePageServiceCardsIndividual">
+                <br />
+                <br />
+            <div class="col">
+                <div class="card h-100 myCard">
+                    <img src="https://images.unsplash.com/photo-1529516548873-9ce57c8f155e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora odit enim nemo porro id error molestias voluptas? Ducimus, facere atque.debitis.</p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            </div>
+            <div class="homePageServiceCardsIndividual">
+                <br />
+                <br />
+            <div class="col">
+                <div class="card h-100 myCard">
+                    <img src="https://images.unsplash.com/photo-1544972917-3529b113a469?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora odit enim nemo porro id error molestias voluptas? Ducimus, facere atque.</p>
+                    </div>
+                </div>
+            </div>
+            <br />
+            </div>
+            <div class="homePageServiceCardsIndividual">
+                <br />
+                <br />
+            <div class="col">
+                <div class="card h-100 myCard">
+                    <img src="https://images.unsplash.com/photo-1540206063137-4a88ca974d1a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora odit enim nemo porro id error molestias voluptas? Ducimus, facere atque.</p>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            </div>
+            <!-- <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1580086319619-3ed498161c77?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et recusandae eaque dolore est cumque qui, dolor excepturi provident pariatur possimus ab soluta voluptates vitae rerum? Dicta ipsum ad suscipit minima quos quibusdam vel at tempore! Perspiciatis corrupti animi eos eligendi?</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- /Services Page -->
+
+
+
+
+
+</body>
+
+
+</html>
