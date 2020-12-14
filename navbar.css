@@ -10,24 +10,24 @@
 
 .navbar .navbar-brand{
     color: #f0f0f0;
-    font-size: large;
+    font-size: x-large;
     font-weight: 600;
 }
 .navbar .navbar-brand:hover{
     color: white;
-    font-size: large;
+    font-size: x-large;
     font-weight: 700;
     border-bottom:5px solid #dcdcdc;
 }
 /*  */
 
 .navbar .navbar-nav .nav-item{
-    text-align: center;
+    text-align: left;
 }
 
 .navbar .navbar-nav .nav-item .nav-link{
     color: #dcdcdc;
-    font-size: large;
+    font-size: x-large;
     font-weight: 600;
 }
 
@@ -41,10 +41,16 @@
 
 .search_icon{
     color: white; 
+    font-size: x-large;
+}
+#searchBar{
+    font-size: x-large;
+    
 }
 .search_icon:hover{
     cursor: pointer;
     color: white; 
+    font-size: x-large;
     background-color: #557a95;
 }
 
